@@ -29,6 +29,10 @@ nav ul{
     color: white;
 }
 
+#homepage i{
+    font-size: 34px;
+}
+
 #daftar-aset nav i{
     font-size: 40px;
 }
