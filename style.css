@@ -22,14 +22,14 @@ body {
     height: 100%;
 }
 .login-box {
-    width: 400px;
+    width: 500px;
     background: transparent;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
 }
 .login-box img {
-    width: 250px; /* Increase the size of the image */
+    width: 100%; /* Set the image width to 100% of the login box */
     margin-bottom: 20px;
 }
 .login-box h5 {
@@ -88,7 +88,14 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
-
+.forgot-pass a {
+    font-size: 0.85em;
+    color: #ffffff;
+    text-decoration: none;
+}
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
 .btn {
     width: 100%;
     height: 45px;
