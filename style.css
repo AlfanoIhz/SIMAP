@@ -29,8 +29,8 @@ body {
     text-align: center;
 }
 .login-box img {
-    width: 250px; /* Increase the size of the image */
-    margin-bottom: 20px;
+    width: 450px; /* Increase the size of the image */
+    margin-left: -50px;
 }
 .login-box h5 {
     font-size: 1.2em;
