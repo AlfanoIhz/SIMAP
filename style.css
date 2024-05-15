@@ -20,17 +20,27 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative; /* Tambahkan ini untuk positioning relatif */
 }
+
+.logo {
+    position: absolute; /* Tambahkan ini untuk positioning absolut */
+    top: 20px; /* Sesuaikan dengan kebutuhan */
+    left: 20px; /* Sesuaikan dengan kebutuhan */
+    width: 100px; /* Sesuaikan dengan ukuran logo */
+    height: auto;
+}
+
 .login-box {
-    width: 400px;
+    width: 500px;
     background: transparent;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
 }
 .login-box img {
-    width: 450px; /* Increase the size of the image */
-    margin-left: -50px;
+    width: 450px; 
+    justify-content: center;
 }
 .login-box h5 {
     font-size: 1.2em;
@@ -88,7 +98,14 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
-
+.forgot-pass a {
+    font-size: 0.85em;
+    color: #ffffff;
+    text-decoration: none;
+}
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
 .btn {
     width: 100%;
     height: 45px;

@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(180, 180, 180);
+}
+
+nav{
+    display: flex; 
+    height: 65px;
+    justify-content: space-between;
+    background: linear-gradient(to right, #C5DFF8, #4A55A2);
+}
+
+nav ul{
+    list-style-type: none; 
+    display: flex; 
+}
+
+.logo{
+    width: 54px;
+}
+
+.username{
+    margin-right: 30px; 
+    margin-top: 5px;
+    padding-left: 10px;
+    color: white;
+}
+
+#container i{
+    font-size: 34px;
+    align-items: center;
+}
+
+#daftar-aset nav i{
+    font-size: 40px;
+}
+
+.box{
+    width: 1200px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
