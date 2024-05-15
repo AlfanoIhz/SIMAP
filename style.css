@@ -20,7 +20,17 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative; /* Tambahkan ini untuk positioning relatif */
 }
+
+.logo {
+    position: absolute; /* Tambahkan ini untuk positioning absolut */
+    top: 20px; /* Sesuaikan dengan kebutuhan */
+    left: 20px; /* Sesuaikan dengan kebutuhan */
+    width: 100px; /* Sesuaikan dengan ukuran logo */
+    height: auto;
+}
+
 .login-box {
     width: 500px;
     background: transparent;
