@@ -1,38 +1,29 @@
-body{
-    background-color: rgb(180, 180, 180);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
-nav{
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:rgb(180, 180, 180);
+} 
+
+.sidebar{
+
+}
+
+.header{
     display: flex; 
-    height: 65px;
+    height: 75px;
     justify-content: space-between;
     background: linear-gradient(to right, #C5DFF8, #4A55A2);
 }
 
-nav ul{
-    list-style-type: none; 
-    display: flex; 
-}
-
-.logo{
-    width: 54px;
-}
-
-.username{
-    margin-right: 30px; 
-    margin-top: 5px;
-    padding-left: 10px;
-    color: white;
-}
-
-#container i{
-    font-size: 34px;
-    align-items: center;
-}
-
-#daftar-aset nav i{
-    font-size: 40px;
-}
 
 .box{
     width: 1200px;

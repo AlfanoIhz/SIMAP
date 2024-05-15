@@ -11,7 +11,7 @@ nav{
 
 nav ul{
     list-style-type: none; 
-    display: flex; 
+    display: flex;
 }
 
 .logo{
@@ -22,7 +22,7 @@ nav ul{
     margin-top: -10px;
 }
 
-.bacaanadminp{
+.username{
     margin-right: 30px; 
     margin-top: 5px;
     padding-left: 10px;
