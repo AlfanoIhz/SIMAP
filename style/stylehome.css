@@ -14,7 +14,11 @@ nav ul{
     display: flex; 
 }
 
-.adminp{
+.logo{
+    width: 54px;
+}
+
+.admin-profile{
     margin-top: -10px;
 }
 
@@ -25,12 +29,11 @@ nav ul{
     color: white;
 }
 
-ion-icon {
-    font-size: 50px;
-    color: #5B79B0;
-  }
+#daftar-aset nav i{
+    font-size: 40px;
+}
 
-.menu{
+.menu-bar{
     margin-left: 30px;
     margin-top: 10px;
 }
