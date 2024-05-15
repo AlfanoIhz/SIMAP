@@ -106,7 +106,7 @@ body {
 .forgot-pass a:hover {
     text-decoration: underline;
 }
-.btnlogin {
+.btn-login {
     display: inline-block;
     width: 150px;
     padding: 10px 20px; 
@@ -119,6 +119,6 @@ body {
     cursor: pointer;
     margin-top: 30px;
 }
-.btnlogin:hover {
+.btn-login:hover {
     background:#4A55A2;
 }
