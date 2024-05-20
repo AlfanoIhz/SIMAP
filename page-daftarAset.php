@@ -15,7 +15,7 @@
                     <a href="#"> <img src="assets/simap.png" class="logo" alt="Logo SIMAP"></a>
                 </div>
                 <ul>
-                    <li><a href="#">Beranda</a></li>
+                    <li><a href="page-Beranda.php">Beranda</a></li>
                     <li><a href="#">Daftar Aset</a></li>
                     <li><a href="#">Daftar Pengajuan <i class="fa-solid fa-angle-down"></i></a>
                         <ul class="dropdown">
