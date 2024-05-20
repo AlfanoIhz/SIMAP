@@ -33,7 +33,7 @@ body {
 
 .sidebar .logo {
     display: block;
-    margin:-20px auto 10px;
+    margin:-20px 0px 20px 0px;
     width: 75px;
 }
 
@@ -100,25 +100,16 @@ body {
 
 .header ul li {
     margin-left: 20px;
-    display: flex;
-    align-items: center;
-
 }
 
-.header ul .admin-profile a{
-    font-size: 30px;
-}
-
-.header ul .username a{
+.header ul li a {
     text-decoration: none;
-    font-size: 20px;
-    font-weight:500;
-    color: #FFF;
+    color: #4a55a2;
 }
 
 .box {
-    width: 990px;
-    height: 590px;
+    width: 1000px;
+    height: 600px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin-top: 30px;
@@ -126,21 +117,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.content {
-    text-align: center;
-    padding: 50px;
-    border-radius: inherit;
-    width: calc(100% - 100px);
-    height: calc(100% - 100px); 
-    box-sizing: border-box;
-}
-
-
-.content .main-logo {
-    width: 250px;
-    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
