@@ -1,93 +1,49 @@
 <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <title>Pengajuan Pengadaan Aset</title>
-                            <link rel="stylesheet" href="pengadaan.css">
-                            <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
-                        </head>
-                        <body>
-                            <div id="daftarAset">
-                                <div class="container"> 
-                                    <nav class="sidebar">
-                                        <div class="logo"> 
-                                            <a href="#"> <img src="simap.png" class="logo" alt="Logo SIMAP"></a>
-                                        </div>
-                                        <ul>
-                                            <li><a href="page-Beranda.php">Beranda</a></li>
-                                            <li><a href="#">Daftar Aset</a></li>
-                                            <li><a href="#">Daftar Pengajuan <i class="fa-solid fa-angle-down"></i></a>
-                                                <ul class="dropdown">
-                                                    <li><a href="#">Pengadaan Aset</a></li>
-                                                    <li><a href="#">Alokasi Aset</a></li>
-                                                    <li><a href="#">Pemeliharaan Aset</a></li>
-                                                    <li><a href="#">Pembuangan Aset</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Laporan Aset</a></li>
-                                        </ul>
-                                    </nav>
-                        
-                                    <div class="header">
-                                        <div class="menu-bar">
-                                           <a href="#"><i class="fa-solid fa-bars" style="color: #4a55a2;"></i></a>
-                                           <h1>Pengajuan Pengadaan Aset</h1>
-                                        </div>
-                                        <ul>
-                                            <li class="admin-profile"><a href="#">
-                                                <i class="fa-solid fa-circle-user" style="color: #4a55a2;"></i>
-                                            </a>
-                                            </li>
-                                            <li class="username">
-                                                <a href="#">Admin Perusahaan</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                        
-                                    <div class="box">
-                                        <h2>Persetujuan Pengadaan Aset</h2>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>No.</th>
-                                                    <th>ID</th>
-                                                    <th>Nama Aset</th>
-                                                    <th>Kategori</th>
-                                                    <th>Jumlah</th>
-                                                    <th>Departemen</th>
-                                                    <th>Tanggal Pengadaan</th>
-                                                    <th>Alasan Pengadaan</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>110001</td>
-                                                    <td>Printer</td>
-                                                    <td>Alat</td>
-                                                    <td>5</td>
-                                                    <td>Keuangan</td>
-                                                    <td>2024-12-15</td>
-                                                    <td>Dibutuhkan untuk mencetak laporan keuangan</td>
-                                                    <td>
-                                                        <button class="approve">Approve</button>
-                                                        <button class="reject">Reject</button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="pagination">
-                                            <button class="prev">Previous</button>
-                                            <button class="next">Next</button>
-                                        </div>
-                                    </div>
-                                </div>   
-                            </div> 
-                        </body>
-                        </html>
-                             <i class="fa-solid fa-circle-user" style="color: #4a55a2;"></i>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan Pengadaan Aset</title>
+    <link rel="stylesheet" href="pengadaan.css">
+    <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
+    <style>
+        .status-text {
+            margin-bottom: 5px;
+            display: block;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="daftarAset">
+        <div class="container">
+            <nav class="sidebar">
+                <div class="logo">
+                    <a href="#"> <img src="simap.png" class="logo" alt="Logo SIMAP"></a>
+                </div>
+                <ul>
+                    <li><a href="page-Beranda.php">Beranda</a></li>
+                    <li><a href="#">Daftar Aset</a></li>
+                    <li><a href="#">Daftar Pengajuan <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Pengadaan Aset</a></li>
+                            <li><a href="#">Alokasi Aset</a></li>
+                            <li><a href="#">Pemeliharaan Aset</a></li>
+                            <li><a href="#">Pembuangan Aset</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Laporan Aset</a></li>
+                </ul>
+            </nav>
+
+            <div class="header">
+                <div class="menu-bar">
+                    <a href="#"><i class="fa-solid fa-bars" style="color: #4a55a2;"></i></a>
+                    <h1>Pengajuan Pengadaan Aset</h1>
+                </div>
+                <ul>
+                    <li class="admin-profile"><a href="#">
+                        <i class="fa-solid fa-circle-user" style="color: #4a55a2;"></i>
                     </a>
                     </li>
                     <li class="username">
@@ -95,8 +51,87 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="box">
+                <h2>Persetujuan Pengadaan Aset</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>ID</th>
+                            <th>Nama Aset</th>
+                            <th>Kategori</th>
+                            <th>Jumlah</th>
+                            <th>Departemen</th>
+                            <th>Tanggal Pengadaan</th>
+                            <th>Alasan Pengadaan</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>110001</td>
+                            <td>Printer</td>
+                            <td>Alat</td>
+                            <td>5</td>
+                            <td>Keuangan</td>
+                            <td>2024-12-15</td>
+                            <td>Dibutuhkan untuk mencetak laporan keuangan</td>
+                            <td>
+                                <div class="status-text"></div>
+                                <button class="approve" onclick="approveAction(this)">Approve</button>
+                                <button class="reject" onclick="rejectAction(this)">Reject</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button class="prev">Previous</button>
+                    <button class="next">Next</button>
+                </div>
             </div>
-        </div>   
-    </div> 
+        </div>
+    </div>
+
+    <script>
+        function approveAction(button) {
+            button.textContent = 'APPROVED';
+            button.style.backgroundColor = '#4caf50';
+            button.style.color = 'white';
+            button.disabled = true; // Disable the button to prevent multiple clicks
+
+            // Find the closest status-text div and update its content
+            var statusTextDiv = button.parentElement.querySelector('.status-text');
+            statusTextDiv.textContent = 'APPROVED';
+            statusTextDiv.style.color = '#4caf50';
+            statusTextDiv.style.fontWeight = 'bold';
+
+            // Hide the approve and reject buttons
+            var approveButton = button.parentElement.querySelector('.approve');
+            var rejectButton = button.parentElement.querySelector('.reject');
+            approveButton.style.display = 'none';
+            rejectButton.style.display = 'none';
+        }
+
+        function rejectAction(button) {
+            button.textContent = 'REJECTED';
+            button.style.backgroundColor = '#f44336';
+            button.style.color = 'white';
+            button.disabled = true; // Disable the button to prevent multiple clicks
+
+            // Find the closest status-text div and update its content
+            var statusTextDiv = button.parentElement.querySelector('.status-text');
+            statusTextDiv.textContent = 'REJECTED';
+            statusTextDiv.style.color = '#f44336';
+            statusTextDiv.style.fontWeight = 'bold';
+
+            // Hide the approve and reject buttons
+            var approveButton = button.parentElement.querySelector('.approve');
+            var rejectButton = button.parentElement.querySelector('.reject');
+            approveButton.style.display = 'none';
+            rejectButton.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
