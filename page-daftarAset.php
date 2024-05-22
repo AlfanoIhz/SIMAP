@@ -54,6 +54,7 @@ if (!$query_mysql) {
             </div>
 
             <div class="box">
+                <h2>Daftar Aset</h2>
                 <table>
                     <thead>
                         <tr>
