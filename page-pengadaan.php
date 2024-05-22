@@ -50,6 +50,7 @@
                 <table>
                     <thead>
                         <tr>
+                        <tr>
                             <th>No.</th>
                             <th>ID</th>
                             <th>Nama Aset</th>
@@ -60,22 +61,23 @@
                             <th>Alasan Pengadaan</th>
                             <th>Status</th>
                         </tr>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>110001</td>
-                            <td>Printer</td>
-                            <td>Alat</td>
-                            <td>5</td>
-                            <td>Keuangan</td>
-                            <td>2024-12-15</td>
-                            <td>Dibutuhkan untuk mencetak laporan keuangan</td>
-                            <td>
+                        <?php while ($data = mysqli_fetch_assoc($query_mysql)) { ?>
+                            <tr>
+                                <td><?php echo $data['idAset']; ?></td>
+                                <td><?php echo $data['namaAset']; ?></td>
+                                <td><?php echo $data['kategoriAset']; ?></td>
+                                <td><?php echo $data['jumlah']; ?></td>
+                                <td><?php echo $data['departemen']; ?></td>
+                                <td><?php echo $data['tanggalMasuk']; ?></td>
+                                <td>
                                 <button class="approve">Approve</button>
                                 <button class="reject">Reject</button>
                             </td>
-                        </tr>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <div class="pagination">

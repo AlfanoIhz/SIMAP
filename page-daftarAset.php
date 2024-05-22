@@ -30,7 +30,7 @@ if (!$query_mysql) {
                     <li><a href="page-daftarAset.php">Daftar Aset</a></li>
                     <li><a href="#">Daftar Pengajuan <i class="fa-solid fa-angle-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="#">Pengadaan Aset</a></li>
+                            <li><a href="page-pengadaan.php">Pengadaan Aset</a></li>
                             <li><a href="#">Alokasi Aset</a></li>
                             <li><a href="#">Pemeliharaan Aset</a></li>
                             <li><a href="#">Pembuangan Aset</a></li>
