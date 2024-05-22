@@ -20,7 +20,7 @@ if (!$query_mysql) {
     <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="daftarAset">
+    <div id="page">
         <div class="container"> 
             <nav class="sidebar">
                 <div class="logo"> 

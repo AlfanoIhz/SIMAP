@@ -9,10 +9,10 @@
     <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="daftarAset">
+    <div id="page">
         <div class="container"> 
             <nav class="sidebar">
-                <div class="logo-container"> 
+                <div class="logo"> 
                     <a href="#"> <img src="assets/simap.png" class="logo" alt="Logo SIMAP"></a>
                 </div>
                 <ul>
@@ -32,8 +32,8 @@
 
             <div class="header">
                 <div class="menu-bar">
-                   <a href="#"><i class="fa-solid fa-bars" style="color: #4a55a2;"></i></a>
-                   <h1>Beranda</h1>
+                    <a href="#"><i class="fa-solid fa-bars" style="color: #4a55a2;"></i></a>
+                    <h1>Beranda</h1>
                 </div>
                 <ul>
                     <li class="admin-profile"><a href="#">
