@@ -28,7 +28,6 @@ body {
     height: 100vh;
     padding-top: 20px;
     position: fixed;
-    
 }
 
 .sidebar .logo {
@@ -168,15 +167,16 @@ button {
 button.approve {
     background-color: #4caf50;
     color: white;
-    
 }
 
 button.reject {
     background-color: #f44336;
     color: white;
-    
-    
-   
+}
+
+.status-text {
+    display: inline-block;
+    margin-top: 8px;
 }
 
 .pagination {
