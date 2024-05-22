@@ -109,6 +109,7 @@ body {
 
 .header ul .admin-profile a {
     font-size: 30px;
+    display: block;
 }
 
 .header ul .username a {
