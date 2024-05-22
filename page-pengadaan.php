@@ -64,20 +64,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while ($data = mysqli_fetch_assoc($query_mysql)) { ?>
+                        <!-- <?php while ($data = mysqli_fetch_assoc($query_mysql)) { ?>
                             <tr>
-                                <td><?php echo $data['idAset']; ?></td>
-                                <td><?php echo $data['namaAset']; ?></td>
-                                <td><?php echo $data['kategoriAset']; ?></td>
-                                <td><?php echo $data['jumlah']; ?></td>
-                                <td><?php echo $data['departemen']; ?></td>
-                                <td><?php echo $data['tanggalMasuk']; ?></td>
-                                <td>
                                 <button class="approve">Approve</button>
                                 <button class="reject">Reject</button>
                             </td>
                             </tr>
-                        <?php } ?>
+                        <?php } ?> -->
                     </tbody>
                 </table>
                 <div class="pagination">
