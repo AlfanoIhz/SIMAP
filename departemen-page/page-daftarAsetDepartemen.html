@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Aset</title>
+    <link rel="icon" href="../assets/simap.png">
+    <link rel="stylesheet" href="../departemen-style/style-daftarAsetDepartemen.css">
+    <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="page">
+        <div class="container"> 
+            <nav class="sidebar">
+                <div class="logo"> 
+                    <a href="#"><img src="../assets/simap.png" class="logo" alt="Logo SIMAP"></a>
+                </div>
+                <ul>
+                    <li><a href="../departemen-page/page-berandaDepartemen.html">Beranda</a></li>
+                    <li><a href="../departemen-page/page-daftarAsetDepartemen.html">Daftar Aset</a></li>
+                    <li><a href="#">Daftar Pengajuan <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="../departemen-page/page-PengadaanDepartemen.html">Pengadaan Aset</a></li>
+                            <li><a href="../departemen-page/page-alokasiDpartemen.html">Alokasi Aset</a></li>
+                            <li><a href="../departemen-page/page-pemeliharaanDepartemen.html">Pemeliharaan Aset</a></li>
+                            <li><a href="../departemen-page/page-pembuanganDepartemen.html">Pembuangan Aset</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header">
+                <div class="menu-bar">
+                    <a href="#"><i class="fa-solid fa-bars" style="color: #4a55a2;"></i></a>
+                    <h1>Daftar Aset</h1>
+                </div>
+                <ul>
+                    <li class="admin-profile"><a href="../departemen-page/page-profileDepartemen.html">
+                        <i class="fa-solid fa-circle-user" style="color: #4a55a2;"></i>
+                    </a>
+                    </li>
+                    <li class="username">
+                        <a href="../departemen-page/page-profileDepartemen.html">Admin Departemen</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>Daftar Aset</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Aset</th>
+                            <th>Nama Aset</th>
+                            <th>Kategori Aset</th>
+                            <th>Jumlah</th>
+                            <th>Departemen</th>
+                            <th>Tanggal Masuk</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <?php while ($data = mysqli_fetch_assoc($query_mysql)) { ?>
+                            <tr>
+                                <td><?php echo $data['idAset']; ?></td>
+                                <td><?php echo $data['namaAset']; ?></td>
+                                <td><?php echo $data['kategoriAset']; ?></td>
+                                <td><?php echo $data['jumlah']; ?></td>
+                                <td><?php echo $data['departemen']; ?></td>
+                                <td><?php echo $data['tanggalMasuk']; ?></td>
+                            </tr>
+                        <?php } ?> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>   
+    </div> 
+</body>
+</html>

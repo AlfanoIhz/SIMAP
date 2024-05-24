@@ -13,8 +13,8 @@
         <div class="login-box">
             <h4>Welcome Back. <span>Please Login!</span></h4>
             <div class="login-options">
-                <a href="page-Beranda.php" class="btn-login btn-admin-perusahaan">Admin Perusahaan</a>
-                <a href="index.html" class="btn-login btn-admin-departemen">Admin Departemen</a>
+                <a href="login-adminPerusahaan.php" class="btn-login btn-admin-perusahaan">Admin Perusahaan</a>
+                <a href="../departemen-page/page-berandaDepartemen.html" class="btn-login btn-admin-departemen">Admin Departemen</a>
                 <a href="index.html" class="btn-login btn-manager">Manager</a>
             </div>
         </div>

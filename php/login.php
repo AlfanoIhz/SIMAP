@@ -14,7 +14,7 @@ if ($cek_user > 0) {
     header('Location: ../page-Beranda.php');
     exit();
 } else {
-    header('Location: ../index.php');
+    header('Location: ../login-adminPerusahaan.php');
     exit();
 }
 
