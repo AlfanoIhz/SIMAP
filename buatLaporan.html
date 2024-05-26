@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Laporan</title>
+    <link rel="stylesheet" href="style-laporanAset.css">
+    <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h2 {
+            margin: 0;
+        }
+        .header a {
+            text-decoration: none;
+            color: #4a55a2;
+            font-weight: bold;
+        }
+        form {
+            display: grid;
+            gap: 20px;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            padding: 10px;
+            background-color: #4a55a2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #3b469d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Buat Laporan</h2>
+            <a href="laporanAset.html"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+        </div>
+        <form id="createReportForm">
+            <label for="namaLaporan">Nama Laporan:</label>
+            <input type="text" id="namaLaporan" name="namaLaporan" required>
+            <label for="idLaporan">ID:</label>
+            <input type="text" id="idLaporan" name="idLaporan" required>
+            <label for="kategori">Kategori:</label>
+            <input type="text" id="kategori" name="kategori" required>
+            <label for="departemen">Nama Departemen:</label>
+            <input type="text" id="departemen" name="departemen" required>
+            <label for="tanggalDibuat">Tanggal Dibuat:</label>
+            <input type="date" id="tanggalDibuat" name="tanggalDibuat" required>
+            <label for="rentangWaktu">Rentang Waktu:</label>
+            <input type="text" id="rentangWaktu" name="rentangWaktu" required>
+            <button type="submit" onclick="saveReport()">Simpan</button>
+        </form>
+    </div>
+    <script>
+        function saveReport() {
+            event.preventDefault();
+            let namaLaporan = document.getElementById('namaLaporan').value;
+            let idLaporan = document.getElementById('idLaporan').value;
+            let kategori = document.getElementById('kategori').value;
+            let departemen = document.getElementById('departemen').value;
+            let tanggalDibuat = document.getElementById('tanggalDibuat').value;
+            let rentangWaktu = document.getElementById('rentangWaktu').value;
+
+            // Simulate saving data
+            console.log("Laporan Disimpan", {
+                namaLaporan,
+                idLaporan,
+                kategori,
+                departemen,
+                tanggalDibuat,
+                rentangWaktu
+            });
+
+            // Redirect to laporanAset.html
+            window.location.href = 'laporanAset.html';
+        }
+    </script>
+</body>
+</html>
