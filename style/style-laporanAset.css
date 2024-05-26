@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #EDEDED;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #4a55a2;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    display: block;
+    margin: 0 auto 10px;
+    width: 75px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #5a66d6;
+    border-radius: 4px;
+}
+
+.sidebar ul li ul.dropdown {
+    display: none;
+    padding-left: 20px;
+}
+
+.sidebar ul li:hover ul.dropdown {
+    display: block;
+}
+
+.header {
+    height: 70px;
+    width: calc(100% - 250px);
+    background: linear-gradient(to right, #C5DFF8, #C5DFF8, #4A55A2);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .menu-bar {
+    display: flex;
+    align-items: center;
+}
+
+.header .menu-bar h1 {
+    margin-left: 20px;
+    font-size: 24px;
+    color: #4a55a2;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header ul li {
+    margin-left: 20px;
+}
+
+.header ul .admin-profile a {
+    font-size: 24px;
+    color: #4a55a2;
+}
+
+.header ul .username a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.box {
+    margin-top: 100px;
+    margin-left: 270px;
+    width: calc(100% - 290px);
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-buat {
+    background-color: #4a55a2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.filter-section label {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #4a55a2;
+}
+
+.filter-section select, .filter-section input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-section .btn-search {
+    background-color: #4a55a2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td {
+    background-color: #fff;
+}
+
+table td .btn-edit, table td .btn-delete {
+    margin-right: 10px;
+    cursor: pointer;
+}
