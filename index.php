@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Manajemen Aset Perusahaan</title>
-    <link rel="icon" href="assets/simap.png">    <link rel="stylesheet" href="style/style-login.css">
+    <link rel="icon" href="assets/simap.png">    
+    <link rel="stylesheet" href="style/style-login.css">
     <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
 </head>
 <body>

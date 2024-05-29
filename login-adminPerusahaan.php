@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="icon" href="assets/simap.png">    <link rel="stylesheet" href="style/style-login.css">
+    <link rel="icon" href="assets/simap.png">    
+    <link rel="stylesheet" href="style/style-loginPerusahaan.css">
     <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,15 +16,15 @@
             <h4>Welcome Back. <span>Please Login!</span></h4>
             <form action="#">
                 <div class="input-box">
-                   <input type="text" name="username"required>
-                   <label>Username</label> 
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required>
                 </div>
                 <div class="input-box">
-                   <input type="password" name="password" required >
-                   <label>Password</label> 
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required >
                 </div>
             </form>
-            <div class="login-btn">
+            <div class="btn-login">
                 <a href="page-Beranda.php">Login</a>
             </div>
         </div>
