@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Aset</title>
+    <link rel="stylesheet" href="style-laporanAset.css">
+    <script src="https://kit.fontawesome.com/97216fb713.js" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="laporanAset">
+        <div class="container"> 
+            <nav class="sidebar">
+                <div class="logo"> 
+                    <a href="#"><img src="simap.png" class="logo" alt="Logo SIMAP"></a>
+                </div>
+                <ul>
+                    <li><a href="page-Beranda.php">Beranda</a></li>
+                    <li><a href="page-daftarAset.php">Daftar Aset</a></li>
+                    <li><a href="#">Daftar Pengajuan <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="persetujuanPengadaan.php">Pengadaan Aset</a></li>
+                            <li><a href="persetujuanAlokasi.php">Alokasi Aset</a></li>
+                            <li><a href="persetujuanPemeliharaan.php">Pemeliharaan Aset</a></li>
+                            <li><a href="persetujuanPembuangan.php">Pembuangan Aset</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Laporan Aset</a></li>
+                </ul>
+            </nav>
+
+            <div class="header">
+                <div class="menu-bar">
+                   <a href="#"><i class="fa-solid fa-bars" style="color: #4a55a2"></i></a>
+                   <h1>Laporan Aset</h1>
+                </div>
+                <ul>
+                    <li class="admin-profile"><a href="#">
+                        <i class="fa-solid fa-circle-user" style="color: #4a55a2;"></i>
+                    </a>
+                    </li>
+                    <li class="username">
+                        <a href="#">Admin Perusahaan</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <!-- Buat Laporan -->
+                <button class="btn-buat" onclick="showModal()"><i class="fa-solid fa-plus" style="color: #ffff; font-size: 20px;"></i> Buat Laporan</button>
+                <div class="filter-section">
+                    <label for="periode">Periode:</label>
+                    <select id="periode">
+                        <option value="januari-2024">Januari 2024</option>
+                        <option value="desember-2023">Desember 2023</option>
+                        <option value="november-2023">November 2023</option>
+                        <option value="oktober-2023">Oktober 2023</option>
+                        <option value="september-2023">September 2023</option>
+                    </select>
+                    <input type="text" id="search" placeholder="Search...">
+                    <button class="btn-search" onclick="searchReports()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <table id="reportsTable">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>ID</th>
+                            <th>Nama Laporan</th>
+                            <th>Kategori</th>
+                            <th>Tanggal Dibuat</th>
+                            <th>Departemen</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="report-1">
+                            <td>1</td>
+                            <td>110001</td>
+                            <td>Laporan Januari</td>
+                            <td>Alat</td>
+                            <td>2024-01-14</td>
+                            <td>Keuangan</td>
+                            <td>
+                                <a href="#" class="btn-edit"><i class="fa-solid fa-pen-to-square" style="color: #4a55a2;"></i></a>
+                                <a href="#" class="btn-delete" onclick="deleteReport('report-1')"><i class="fa-solid fa-trash-can" style="color: #D62F2F;"></i></a>
+                            </td>
+                        </tr>
+                        <tr id="report-2">
+                            <td>2</td>
+                            <td>110002</td>
+                            <td>Laporan Februari</td>
+                            <td>Mesin</td>
+                            <td>2024-01-17</td>
+                            <td>Operasi Proyek</td>
+                            <td>
+                                <a href="#" class="btn-edit"><i class="fa-solid fa-pen-to-square" style="color: #4a55a2;"></i></a>
+                                <a href="#" class="btn-delete" onclick="deleteReport('report-2')"><i class="fa-solid fa-trash-can" style="color: #D62F2F;"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>   
+    </div> 
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Buat Laporan</h2>
+            <form id="createReportForm">
+                <label for="namaLaporan">Nama Laporan:</label>
+                <input type="text" id="namaLaporan" name="namaLaporan" required>
+                <label for="idLaporan">ID:</label>
+                <input type="text" id="idLaporan" name="idLaporan" required>
+                <label for="kategori">Kategori:</label>
+                <input type="text" id="kategori" name="kategori" required>
+                <label for="departemen">Nama Departemen:</label>
+                <input type="text" id="departemen" name="departemen" required>
+                <label for="tanggalDibuat">Tanggal Dibuat:</label>
+                <input type="date" id="tanggalDibuat" name="tanggalDibuat" required>
+                <button type="button" onclick="addReport()">Simpan</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the modal
+        function showModal() {
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        // Function to search reports
+        function searchReports() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let table = document.getElementById('reportsTable');
+            let tr = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName('td');
+                let match = false;
+                for (let j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        let textValue = td[j].textContent || td[j].innerText;
+                        if (textValue.toLowerCase().indexOf(input) > -1) {
+                            match = true;
+                            break;
+                        }
+                    }
+                }
+                if (match) {
+                    tr[i].style.display = '';
+                } else {
+                    tr[i].style.display = 'none';
+                }
+            }
+        }
+
+        // Function to delete a report
+        function deleteReport(reportId) {
+            if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                let row = document.getElementById(reportId);
+                row.parentNode.removeChild(row);
+            }
+        }
+
+        // Function to add a new report
+        function addReport() {
+            let table = document.getElementById('reportsTable').getElementsByTagName('tbody')[0];
+            let rowCount = table.rows.length;
+            let row = table.insertRow(rowCount);
+
+            let namaLaporan = document.getElementById('namaLaporan').value;
+            let idLaporan = document.getElementById('idLaporan').value;
+            let kategori = document.getElementById('kategori').value;
+            let departemen = document.getElementById('departemen').value;
+            let tanggalDibuat = document.getElementById('tanggalDibuat').value;
+
+            row.id = 'report-' + (rowCount + 1);
+
+            row.insertCell(0).innerHTML = rowCount + 1;
+            row.insertCell(1).innerHTML = idLaporan;
+            row.insertCell(2).innerHTML = namaLaporan;
+            row.insertCell(3).innerHTML = kategori;
+            row.insertCell(4).innerHTML = tanggalDibuat;
+            row.insertCell(5).innerHTML = departemen;
+            row.insertCell(6).innerHTML = `<a href="#" class="btn-edit"><i class="fa-solid fa-pen-to-square" style="color: #4a55a2;"></i></a>
+                                           <a href="#" class="btn-delete" onclick="deleteReport('report-${rowCount + 1}')"><i class="fa-solid fa-trash-can" style="color:
+                                            #D62F2F;"></i></a>`;
+
+            closeModal();
+            clearForm();
+        }
+
+        // Function to clear the form after submission
+        function clearForm() {
+            document.getElementById('createReportForm').reset();
+        }
+    </script>
+</body>
+</html>
