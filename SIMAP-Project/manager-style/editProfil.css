@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #EDEDED;
+}
+
+#daftarAset .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    background-color: #4a55a2;
+    width: 250px;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.sidebar .logo {
+    display: block;
+    margin: -20px auto 10px;
+    width: 75px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #5a66d6;
+    border-radius: 4px;
+}
+
+.sidebar ul li ul.dropdown {
+    display: none;
+    padding-left: 20px;
+}
+
+.sidebar ul li:hover ul.dropdown {
+    display: block;
+}
+
+.header {
+    height: 70px;
+    width: calc(100% - 250px);
+    background: linear-gradient(to right, #C5DFF8, #C5DFF8, #4A55A2);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .menu-bar {
+    text-decoration: none;
+    color: #4a55a2;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+}
+
+.header .menu-bar h1 {
+    text-decoration: none;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header ul li {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header ul .admin-profile a {
+    font-size: 30px;
+}
+
+.header ul .username a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.box {
+    width: calc(100% - 290px); /* Ensure the box fits within the viewport */
+    max-width: 920px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 100px 20px 20px auto; /* Align to the right with top and bottom margins */
+    padding: 40px; /* Add padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.content {
+    text-align: center;
+    padding: 0; /* Remove extra padding */
+    border-radius: inherit;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.info-item {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.edit-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Add some space between buttons */
+    margin-top: 20px;
+}
+
+.editButton, .saveButton {
+    background-color: #4a55a2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.editButton:hover, .saveButton:hover {
+    background-color: #3d4798;
+}
+
+.editButton {
+    background-color: #5a66d6;
+}
+
+.editButton i, .saveButton i {
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .header {
+        width: 100%;
+        left: 0;
+        padding: 0 10px;
+    }
+
+    .header .menu-bar {
+        display: block;
+    }
+
+    .sidebar ul {
+        flex-direction: column;
+    }
+
+    .box {
+        width: calc(100% - 40px);
+        margin: 100px 20px 20px 20px; /* Ensure margins for responsive design */
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch; /* Ensure buttons take full width in column layout */
+    }
+
+    .editButton, .saveButton {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .button-container .editButton:last-child, .button-container .saveButton:last-child {
+        margin-bottom: 0; /* Remove bottom margin for the last button */
+    }
+}
+
+.info h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
